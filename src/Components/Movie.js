@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import "./movie.css";
 
-function Movie({ title, date, rank }) {
+function Movie({ id, title, date, rank }) {
   return (
-    <Link to={{ pathname: "/movie-detail", state: { date, title, rank } }}>
+    <Link to={{ pathname: `/movie/${id}`, state: { date, title, rank } }}>
       <div className="movies_movie">
         <h2>{rank}</h2>
         <h3

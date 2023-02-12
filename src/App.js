@@ -23,7 +23,7 @@ function App() {
           element={<About />}
         />
         <Route
-          path="/movie-detail"
+          path="/movie/:id"
           // component={About}
           element={<Detail />}
         />
