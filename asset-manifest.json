@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/assignment1_movie_app_2019/static/css/main.ea338f8c.css",
+    "main.js": "/assignment1_movie_app_2019/static/js/main.74bc3f7c.js",
+    "index.html": "/assignment1_movie_app_2019/index.html",
+    "main.ea338f8c.css.map": "/assignment1_movie_app_2019/static/css/main.ea338f8c.css.map",
+    "main.74bc3f7c.js.map": "/assignment1_movie_app_2019/static/js/main.74bc3f7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea338f8c.css",
+    "static/js/main.74bc3f7c.js"
+  ]
+}
