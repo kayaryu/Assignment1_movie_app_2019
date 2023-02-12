@@ -1,19 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import "./movie.css";
 
 function Movie({ title, date, rank }) {
   return (
-    <div className="movies_movie">
-      <h2>{rank}</h2>
-      <h3
-        className="movie_tit"
-        style={{ fontSize: "18px" }}
-      >
-        {title.slice(0, 10)}...
-      </h3>
-      <h4 className="move_date">{date}</h4>
-      {/* <ul className="rank">
+    <Link to={{ pathname: "/movie-detail", state: { date, title, rank } }}>
+      <div className="movies_movie">
+        <h2>{rank}</h2>
+        <h3
+          className="movie_tit"
+          style={{ fontSize: "18px" }}
+        >
+          {title.slice(0, 10)}...
+        </h3>
+        <h4 className="move_date">{date}</h4>
+        {/* <ul className="rank">
         {rank.map((rank, index) => (
           <li
             key={index}
@@ -24,7 +26,8 @@ function Movie({ title, date, rank }) {
           </li>
         ))}
       </ul> */}
-    </div>
+      </div>
+    </Link>
   );
 }
 
