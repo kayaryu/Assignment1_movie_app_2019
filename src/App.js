@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Movie from "./Movie";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -32,21 +33,31 @@ class App extends React.Component {
   render() {
     const { isLoading, dailyBoxOfficeList } = this.state;
     return (
-      <div>
-        {isLoading
-          ? "Loading..."
-          : dailyBoxOfficeList.map((dailyBoxOfficeList) => {
-              console.log(dailyBoxOfficeList);
+      <section className="container">
+        {isLoading ? (
+          <div className="loader">
+            <span className="loader_txt">Loading...</span>
+          </div>
+        ) : (
+          <div className="movies">
+            <h1>
+              Daily BoxOffice List<em>(021123)</em>
+            </h1>
+            {dailyBoxOfficeList.map((dailyBoxOfficeList) => {
+              // console.log(dailyBoxOfficeList);
               return (
                 <Movie
                   key={dailyBoxOfficeList.rnum}
                   id={dailyBoxOfficeList.rnum}
                   title={dailyBoxOfficeList.movieNm}
                   date={dailyBoxOfficeList.movieCd}
+                  rank={dailyBoxOfficeList.rank}
                 />
               );
             })}
-      </div>
+          </div>
+        )}
+      </section>
     );
   }
 }
